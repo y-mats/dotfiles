@@ -16,3 +16,4 @@ cd $(dirname $0)
 current_dir=$(pwd)
 install -m 664 ${current_dir}/bashrc ${HOME}/.bashrc
 install -m 664 ${current_dir}/vimrc  ${HOME}/.vimrc
+mkdir -p ${HOME}/tmp
