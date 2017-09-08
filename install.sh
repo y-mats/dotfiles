@@ -14,6 +14,11 @@ fi
 
 cd $(dirname $0)
 current_dir=$(pwd)
-install -m 664 ${current_dir}/bashrc ${HOME}/.bashrc
+cat << 'EOS' >> $HOME/.bashrc
+if [ -f $HOME/dotfiles/my_env ]
+then
+    source $HOME/dotfiles/my_env
+fi
+EOS
 install -m 664 ${current_dir}/vimrc  ${HOME}/.vimrc
 mkdir -p ${HOME}/tmp
