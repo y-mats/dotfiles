@@ -14,9 +14,9 @@ fi
 if [ -e $HOME/.git-prompt.sh ]
 then
   . $HOME/.git-prompt.sh
-  export PS1='[\u@\h \w$(__git_ps1 " (%s)")]\$ '
+  export PS1='[$(date +%Y-%m-%dT%H:%M:%S) \u@\h \w$(__git_ps1 " (%s)")]\$ '
 else
-  export PS1='[\u@\h \w]\$ '
+  export PS1='[$(date +%Y-%m-%dT%H:%M:%S) \u@\h \w]\$ '
 fi
 # プロンプトにフルパスを表示
 # screen のエージェント転送用設定
